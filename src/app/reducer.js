@@ -1,6 +1,7 @@
+import {combineReducers} from 'redux'
 
-const reducer = {
-    core: () => console.log('reducer'),
-};
+const reducer = combineReducers({
+    core: () => 3,
+});
 
-export default reducer;
+export {reducer};

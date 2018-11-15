@@ -19,8 +19,8 @@ module.exports = {
         contentBase: pathList.public,
         historyApiFallback: true,
         host: '0.0.0.0',
-        hot: true,
         port: 8000,
+        index: path.resolve(pathList.dist, './index.html'),
         stats,
     },
     devtool: isProd ? false : 'eval',
@@ -34,6 +34,7 @@ module.exports = {
     },
     resolve: {
         extensions: ['.es', '.js', '.jsx'],
+        mainFiles: ['index'],
         modules: [
             path.resolve(pathList.src, '/modules'),
             pathList.src,

@@ -1,7 +1,7 @@
 import React from 'react'
-import createStore from '/app/store'
+import {configureStore} from 'app/store.js'
 import {Provider} from 'react-redux'
 
-const App = <Provider store={createStore()}>Hello</Provider>;
+const App = <Provider store={configureStore()}>Hello</Provider>;
 
-export default App
+export {App}
