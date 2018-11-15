@@ -4,5 +4,5 @@ import {App} from 'app'
 
 const root = document.getElementById('root');
 if (root) {
-    render(<h1>Hello</h1>, root)
+    render(<App/>, root)
 }
