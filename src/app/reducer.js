@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux'
+import {userReducer} from "redux/reducers/user";
 
 const reducer = combineReducers({
-    core: () => 3,
+    user: userReducer
 });
 
 export {reducer};

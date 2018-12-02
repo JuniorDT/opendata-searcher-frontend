@@ -33,10 +33,9 @@ module.exports = {
         publicPath: '/build/',
     },
     resolve: {
-        extensions: ['.es', '.js', '.jsx'],
-        mainFiles: ['index'],
+        extensions: ['*', '.js', '.jsx'],
         modules: [
-            path.resolve(pathList.src, '/modules'),
+            path.resolve(pathList.src, '/design'),
             pathList.src,
             'node_modules',
         ],
@@ -79,7 +78,6 @@ function getRuleListStyle() {
             use: [
                 isProd ? MiniCssExtractPlugin.loader : 'style-loader',
                 'css-loader',
-                'postcss-loader',
             ],
         },
         {
@@ -87,7 +85,6 @@ function getRuleListStyle() {
             use: [
                 isProd ? MiniCssExtractPlugin.loader : 'style-loader',
                 'css-loader',
-                'postcss-loader',
                 'less-loader',
                 {
                     loader: 'less-loader',

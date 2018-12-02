@@ -1,0 +1,34 @@
+@import  (reference) "~design/styles/variables.less";
+@import  (reference) "~design/styles/mixins.less";
+
+
+.header {
+  &__container {
+    .flex-row;
+    height: @sHeaderHeight;
+    background-color: @cPrimary;
+    width: 100%;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+  }
+
+  &__logo {
+    font-size: @fLargest;
+  }
+
+  &__profile {
+    .flex-row;
+    justify-content: flex-end;
+  }
+
+  &__profile-select {
+    .clearNativeButton;
+  }
+
+  &__inner-wrapper {
+    .flex-row;
+  }
+}
